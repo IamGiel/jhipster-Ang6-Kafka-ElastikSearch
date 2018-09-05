@@ -43,7 +43,7 @@ spring:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:mysql://localhost:3306/jhipster?useUnicode=true&characterEncoding=utf8&useSSL=false
         username: root
-        password:
+        password: password
         hikari:
             auto-commit: false
             data-source-properties:
@@ -72,8 +72,8 @@ spring:
     mail:
         host: localhost
         port: 25
-        username:
-        password:
+        ? username
+        ? password
     messages:
         cache-duration: PT1S # 1 second, see the ISO 8601 standard
     thymeleaf:
@@ -111,10 +111,10 @@ jhipster:
             max-entries: 100 # Number of objects in each cache entry
     # CORS is only enabled by default with the "dev" profile, so BrowserSync can access the API
     cors:
-        allowed-origins: "*"
-        allowed-methods: "*"
-        allowed-headers: "*"
-        exposed-headers: "Authorization,Link,X-Total-Count"
+        allowed-origins: '*'
+        allowed-methods: '*'
+        allowed-headers: '*'
+        exposed-headers: 'Authorization,Link,X-Total-Count'
         allow-credentials: true
         max-age: 1800
     security:
